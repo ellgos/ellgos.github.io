@@ -1,11 +1,891 @@
+Hugging Face's logo
+Hugging Face
+Models
+Datasets
+Spaces
+Community
+Docs
+Enterprise
+Pricing
+
+
+
+Spaces:
+
+ellgos
+/
+mygithubpages
+
+
+like
+0
+App
+Files
+Community
+Settings
+mygithubpages
+/
+index.html
+
+ellgos's picture
+ellgos
+Add 3 files
+ef5058e
+verified
+34 minutes ago
+raw
+
+Copy download link
+history
+blame
+edit
+delete
+
+39.3 kB
 <!DOCTYPE html>
-<html lang="en">                   
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elvis Siqueira | Front-End Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-blue': '#00f7ff',
+                        'neon-purple': '#bd00ff',
+                        'dark-01': '#0d1117',
+                        'dark-02': '#161b22'
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'gradient': 'gradient 8s ease infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        gradient: {
+                            '0%, 100%': { 'background-position': '0% 50%' },
+                            '50%': { 'background-position': '100% 50%' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700&family=Orbitron:wght@500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Exo 2', sans-serif;
+            background-color: #0d1117;
+            color: #f0f6fc;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+        }
+
+        .neon-text {
+            text-shadow: 0 0 10px rgba(0, 247, 255, 0.7),
+                0 0 20px rgba(0, 247, 255, 0.5),
+                0 0 30px rgba(0, 247, 255, 0.3);
+        }
+
+        .neon-border {
+            position: relative;
+            border: 1px solid transparent;
+            border-radius: 12px;
+        }
+
+        .neon-border::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #00f7ff, #bd00ff, #00f7ff);
+            background-size: 200% 200%;
+            border-radius: 14px;
+            z-index: -1;
+            opacity: 0.6;
+            animation: gradient 8s ease infinite;
+        }
+
+        .glow-on-hover:hover {
+            box-shadow: 0 0 20px rgba(0, 247, 255, 0.7);
+            transform: translateY(-4px);
+        }
+
+        .futuristic-card {
+            background: linear-gradient(145deg, rgba(22, 27, 34, 0.7), rgba(13, 17, 23, 0.9));
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(96, 123, 150, 0.2);
+            transition: all 0.4s ease;
+        }
+
+        .futuristic-card:hover {
+            transform: translateY(-8px);
+            border: 1px solid rgba(0, 247, 255, 0.4);
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 16px;
+        }
+
+        .tech-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 12px;
+            border-radius: 8px;
+            background-color: rgba(22, 27, 34, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .tech-item:hover {
+            background-color: rgba(0, 247, 255, 0.1);
+            transform: scale(1.05);
+        }
+
+        .avatar-container {
+            position: relative;
+            width: 180px;
+            height: 180px;
+        }
+
+        .avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #0d1117;
+            box-shadow: 0 0 30px rgba(0, 247, 255, 0.5);
+            position: relative;
+            z-index: 2;
+        }
+
+        .pulse-ring {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: rgba(0, 247, 255, 0.2);
+            animation: pulse-slow 4s infinite;
+            z-index: 1;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a, #1e293b, #0f172a);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00f7ff, #bd00ff, #00f7ff, transparent);
+        }
+
+        .floating-element {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .holographic-bar {
+            height: 4px;
+            background: linear-gradient(90deg, #00f7ff, #bd00ff);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #00f7ff, #bd00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+
+        /* Mobile navigation styling */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(13, 17, 23, 0.95);
+            z-index: 50;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transform: translateY(-100%);
+            transition: transform 0.5s ease;
+        }
+
+        .mobile-nav.open {
+            transform: translateY(0);
+        }
+
+        @media (min-width: 768px) {
+            .mobile-nav {
+                display: none;
+            }
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #161b22;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #00f7ff, #bd00ff);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #00c9cc, #9d00d6);
+        }
+    </style>
+</head>
+
+<body class="bg-dark-01 text-gray-300">
+    <!-- Navigation -->
+    <nav class="fixed w-full py-4 px-6 z-50 bg-dark-01/90 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <div
+                    class="w-10 h-10 bg-gradient-to-br from-neon-blue to-neon-purple rounded-full flex items-center justify-center mr-3">
+                    <span class="font-bold text-dark-01">ES</span>
+                </div>
+                <span class="text-xl font-bold gradient-text">Elvis Siqueira</span>
+            </div>
+
+            <div class="hidden md:flex space-x-10">
+                <a href="#hero" class="hover:text-neon-blue transition-colors">Início</a>
+                <a href="#about" class="hover:text-neon-blue transition-colors">Sobre</a>
+                <a href="#skills" class="hover:text-neon-blue transition-colors">Habilidades</a>
+                <a href="#projects" class="hover:text-neon-blue transition-colors">Projetos</a>
+                <a href="#contact" class="hover:text-neon-blue transition-colors">Contato</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <a href="https://github.com/" target="_blank"
+                    class="p-2 rounded-full hover:bg-gray-800 transition-colors">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+                <button id="mobile-menu-button" class="md:hidden text-xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-nav" class="mobile-nav">
+        <div class="flex flex-col items-center space-y-8 text-xl">
+            <a href="#hero" class="text-2xl hover:text-neon-blue transition-colors">Início</a>
+            <a href="#about" class="text-2xl hover:text-neon-blue transition-colors">Sobre</a>
+            <a href="#skills" class="text-2xl hover:text-neon-blue transition-colors">Habilidades</a>
+            <a href="#projects" class="text-2xl hover:text-neon-blue transition-colors">Projetos</a>
+            <a href="#contact" class="text-2xl hover:text-neon-blue transition-colors">Contato</a>
+        </div>
+        <button id="close-mobile-menu" class="absolute top-6 right-6 text-2xl">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center pt-16 pb-32">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 z-10 mb-16 md:mb-0">
+                <div class="flex items-center mb-4">
+                    <div class="h-0.5 w-20 bg-gradient-to-r from-neon-blue to-neon-purple mr-4"></div>
+                    <span class="text-neon-purple font-medium">Bem-vindo(a) ao meu portfólio</span>
+                </div>
+
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                    <span class="block">Elvis Siqueira</span>
+                    <span
+                        class="neon-text text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-purple">Front-End
+                        Developer</span>
+                </h1>
+
+                <p class="text-xl mb-10 max-w-2xl">
+                    Transformando ideias em interfaces modernas e acessíveis com tecnologia de ponta.
+                </p>
+
+                <div class="flex space-x-4">
+                    <a href="#projects"
+                        class="px-8 py-3 rounded-full bg-gradient-to-r from-neon-blue to-neon-purple text-dark-01 font-bold glow-on-hover transition-all">
+                        Meus Projetos
+                    </a>
+                    <a href="#contact"
+                        class="px-8 py-3 rounded-full border-2 border-neon-blue text-neon-blue font-bold hover:bg-neon-blue/10 glow-on-hover transition-all">
+                        Contate-me
+                    </a>
+                </div>
+            </div>
+
+            <div class="md:w-1/2 flex justify-center relative floating-element">
+                <div class="relative">
+                    <div class="absolute top-0 right-0 w-72 h-72 bg-neon-purple/10 rounded-full blur-3xl animate-pulse">
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-80 h-80 bg-neon-blue/10 rounded-full blur-3xl animate-pulse">
+                    </div>
+
+                    <div class="relative z-10">
+                        <div class="avatar-container">
+                            <div class="pulse-ring"></div>
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Elvis Siqueira" class="avatar">
+                        </div>
+
+                        <div class="mt-6 max-w-xs mx-auto bg-dark-02/60 backdrop-blur-md rounded-lg p-4 neon-border">
+                            <div class="flex items-center mb-2">
+                                <div class="h-3 w-3 bg-green-500 rounded-full mr-2"></div>
+                                <span class="text-sm">Disponível para projetos</span>
+                            </div>
+                            <p class="text-xs">Criando soluções front-end modernas e performáticas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Animated Background Elements -->
+        <div class="absolute top-40 left-20 w-4 h-4 rounded-full bg-neon-blue animate-pulse"></div>
+        <div class="absolute top-1/3 right-40 w-6 h-6 rounded-full bg-neon-purple animate-pulse"></div>
+        <div class="absolute bottom-40 left-1/4 w-3 h-3 rounded-full bg-neon-blue animate-pulse"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 gradient-bg">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-bold mb-4 gradient-text">Sobre Mim</h2>
+                <div class="section-divider max-w-2xl mx-auto my-6"></div>
+                <p class="text-xl max-w-3xl mx-auto">Desenvolvedor Front-End apaixonado por transformar design em
+                    interfaces interativas e acessíveis</p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="lg:w-2/3">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="futuristic-card p-8 rounded-xl">
+                            <div class="flex items-center mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-gradient-to-br from-neon-blue to-neon-purple flex items-center justify-center mr-4">
+                                    <i class="fas fa-briefcase text-xl text-dark-01"></i>
+                                </div>
+                                <h3 class="text-xl font-bold">Experiência Atual</h3>
+                            </div>
+                            <p>Analista de suporte no TJDFT, utilizando <span class="text-neon-blue">PHP</span>, <span
+                                    class="text-neon-blue">JavaScript</span> e <span class="text-neon-blue">Git</span>
+                                para desenvolvimento em produção.</p>
+                        </div>
+
+                        <div class="futuristic-card p-8 rounded-xl">
+                            <div class="flex items-center mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-gradient-to-br from-neon-blue to-neon-purple flex items-center justify-center mr-4">
+                                    <i class="fas fa-graduation-cap text-xl text-dark-01"></i>
+                                </div>
+                                <h3 class="text-xl font-bold">Formação</h3>
+                            </div>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>Ciência de Dados (Escola DNC)</li>
+                                <li>Análise e Desenvolvimento de Sistemas (Projeção/DF)</li>
+                            </ul>
+                        </div>
+
+                        <div class="futuristic-card p-8 rounded-xl">
+                            <div class="flex items-center mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-gradient-to-br from-neon-blue to-neon-purple flex items-center justify-center mr-4">
+                                    <i class="fas fa-lightbulb text-xl text-dark-01"></i>
+                                </div>
+                                <h3 class="text-xl font-bold">Mentalidade</h3>
+                            </div>
+                            <p>Curioso, analítico e com visão de negócios aplicada à tecnologia. Sempre em busca de
+                                soluções criativas para desafios complexos.</p>
+                        </div>
+
+                        <div class="futuristic-card p-8 rounded-xl">
+                            <div class="flex items-center mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-gradient-to-br from-neon-blue to-neon-purple flex items-center justify-center mr-4">
+                                    <i class="fas fa-rocket text-xl text-dark-01"></i>
+                                </div>
+                                <h3 class="text-xl font-bold">Objetivos</h3>
+                            </div>
+                            <p>Em transição de carreira para desenvolvimento Front-End, construindo um portfólio sólido
+                                com projetos práticos focados em React, Next.js e tecnologias modernas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/3">
+                    <div class="futuristic-card p-8 rounded-xl">
+                        <div class="flex items-center mb-6">
+                            <div
+                                class="w-14 h-14 rounded-full bg-gradient-to-br from-neon-blue to-neon-purple flex items-center justify-center mr-4">
+                                <i class="fas fa-book text-2xl text-dark-01"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold gradient-text">Estudos Atuais</h3>
+                        </div>
+
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">React</span>
+                                    <span class="text-neon-blue">85%</span>
+                                </div>
+                                <div class="holographic-bar rounded-full overflow-hidden">
+                                    <div class="h-full rounded-full" style="width: 85%; height: 8px;"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Next.js</span>
+                                    <span class="text-neon-blue">75%</span>
+                                </div>
+                                <div class="holographic-bar rounded-full overflow-hidden">
+                                    <div class="h-full rounded-full" style="width: 75%; height: 8px;"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">TypeScript</span>
+                                    <span class="text-neon-blue">70%</span>
+                                </div>
+                                <div class="holographic-bar rounded-full overflow-hidden">
+                                    <div class="h-full rounded-full" style="width: 70%; height: 8px;"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Tailwind CSS</span>
+                                    <span class="text-neon-blue">90%</span>
+                                </div>
+                                <div class="holographic-bar rounded-full overflow-hidden">
+                                    <div class="h-full rounded-full" style="width: 90%; height: 8px;"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">SASS</span>
+                                    <span class="text-neon-blue">80%</span>
+                                </div>
+                                <div class="holographic-bar rounded-full overflow-hidden">
+                                    <div class="h-full rounded-full" style="width: 80%; height: 8px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-bold mb-4 gradient-text">Minhas Habilidades</h2>
+                <div class="section-divider max-w-2xl mx-auto my-6"></div>
+                <p class="text-xl max-w-3xl mx-auto">Tecnologias e ferramentas que domino e continuo aperfeiçoando</p>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <i class="fab fa-react text-5xl text-blue-400 mb-2"></i>
+                    <span>React</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-js text-5xl text-yellow-400 mb-2"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-html5 text-5xl text-orange-500 mb-2"></i>
+                    <span>HTML5</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-css3-alt text-5xl text-blue-500 mb-2"></i>
+                    <span>CSS3</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-git-alt text-5xl text-orange-600 mb-2"></i>
+                    <span>Git</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-sass text-5xl text-pink-500 mb-2"></i>
+                    <span>SASS</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-php text-5xl text-purple-500 mb-2"></i>
+                    <span>PHP</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-bootstrap text-5xl text-purple-600 mb-2"></i>
+                    <span>Bootstrap</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-node-js text-5xl text-green-600 mb-2"></i>
+                    <span>Node.js</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-npm text-5xl text-red-600 mb-2"></i>
+                    <span>npm</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://seeklogo.com/images/T/tailwind-css-logo-5AD4175897-seeklogo.com.png"
+                        alt="Tailwind CSS" class="w-10 h-10 mb-2">
+                    <span>Tailwind</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" alt="Next.js" class="w-10 h-10 mb-2">
+                    <span>Next.js</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.worldvectorlogo.com/logos/typescript.svg" alt="TypeScript"
+                        class="w-10 h-10 mb-2">
+                    <span>TypeScript</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.worldvectorlogo.com/logos/firebase-1.svg" alt="Firebase"
+                        class="w-10 h-10 mb-2">
+                    <span>Firebase</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.worldvectorlogo.com/logos/figma-1.svg" alt="Figma" class="w-10 h-10 mb-2">
+                    <span>Figma</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-dark-02">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-bold mb-4 gradient-text">Meus Projetos</h2>
+                <div class="section-divider max-w-2xl mx-auto my-6"></div>
+                <p class="text-xl max-w-3xl mx-auto">Portfólio em construção com projetos práticos focados em FrontEnd
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <a href="#" class="group">
+                    <div class="futuristic-card h-full rounded-xl overflow-hidden">
+                        <div class="relative overflow-hidden h-56">
+                            <div class="bg-gradient-to-r from-neon-purple/30 to-neon-blue/30 absolute inset-0"></div>
+                            <div class="bg-gray-700 border-2 border-dashed rounded-xl w-full h-full" />
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span
+                                    class="text-2xl font-bold gradient-text group-hover:scale-110 transition-transform">Em
+                                    breve</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Dashboard Admin Moderna</h3>
+                            <p class="text-gray-400 mb-4">Interface de administração responsiva construída com React e
+                                Tailwind CSS</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-dark-01 rounded-full text-xs">React</span>
+                                <span class="px-3 py-1 bg-dark-01 rounded-full text-xs">Tailwind</span>
+                                <span class="px-3 py-1 bg-dark-01 rounded-full text-xs">Context API</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 2 -->
+                <a href="#" class="group">
+                    <div class="futuristic-card h-full rounded-xl overflow-hidden">
+                        <div class="relative overflow-hidden h-56">
+                            <div class="bg-gradient-to-r from-neon-blue/30 to-neon-purple/30 absolute inset-0"></div>
+                            <div class="bg-gray-700 border-2 border-dashed rounded-xl w-full h-full" />
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span
+                                    class="text-2xl font-bold gradient-text group-hover:scale-110 transition-transform">Em
+                                    breve</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">E-commerce NextJS</h3>
+                            <p class="text-gray-400 mb-4">Loja virtual completa com carrinho de compras e integração de
+                                pagamento</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-dark-01 rounded-full text-xs">Next.js</span>
+                                <span class="px-3 py-1 bg-dark-01 rounded-full text-xs">TypeScript</span>
+                                <span class="px-3 py-1 bg-dark-01 rounded-full text-xs">Stripe</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 3 -->
+                <a href="#" class="group">
+                    <div class="futuristic-card h-full rounded-xl overflow-hidden">
+                        <div class="relative overflow-hidden h-56">
+                            <div class="bg-gradient-to-r from-purple-500/30 to-pink-500/30 absolute inset-0"></div>
+                            <div class="bg-gray-700 border-2 border-dashed rounded-xl w-full h-full" />
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span
+                                    class="text-2xl font-bold gradient-text group-hover:scale-110 transition-transform">Em
+                                    breve</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Aplicativo de Notas</h3>
+                            <p class="text-gray-400 mb-4">Gerenciador de notas com armazenamento local e modo escuro</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-dark-01 rounded-full text-xs">JavaScript</span>
+                                <span class="px-3 py-1 bg-dark-01 rounded-full text-xs">SASS</span>
+                                <span class="px-3 py-1 bg-dark-01 rounded-full text-xs">LocalStorage</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="text-center mt-16">
+                <a href="#"
+                    class="px-8 py-4 rounded-full bg-gradient-to-r from-neon-purple to-neon-blue text-dark-01 font-bold glow-on-hover transition-all inline-block">
+                    <i class="fab fa-github mr-2"></i> Ver Mais no GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-bold mb-4 gradient-text">Contate-me</h2>
+                <div class="section-divider max-w-2xl mx-auto my-6"></div>
+                <p class="text-xl max-w-3xl mx-auto">Vamos trabalhar juntos! Estou disponível para projetos freelancer e
+                    oportunidades em Front-End</p>
+            </div>
+
+            <div class="futuristic-card p-8 rounded-xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6">Informações de Contato</h3>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-gradient-to-br from-neon-blue to-neon-purple flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-xl text-dark-01"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Email</h4>
+                                    <a href="mailto:contato@elvissiqueira.dev"
+                                        class="hover:text-neon-blue transition-colors">contato@elvissiqueira.dev</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-gradient-to-br from-neon-blue to-neon-purple flex items-center justify-center mr-4">
+                                    <i class="fab fa-linkedin-in text-xl text-dark-01"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">LinkedIn</h4>
+                                    <a href="#"
+                                        class="hover:text-neon-blue transition-colors">linkedin.com/in/elvissiqueira</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-gradient-to-br from-neon-blue to-neon-purple flex items-center justify-center mr-4">
+                                    <i class="fab fa-github text-xl text-dark-01"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">GitHub</h4>
+                                    <a href="https://github.com/"
+                                        class="hover:text-neon-blue transition-colors">github.com/elvissiqueira</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <form>
+                            <div class="mb-4">
+                                <label class="block mb-2">Nome</label>
+                                <input type="text"
+                                    class="w-full bg-dark-02 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-neon-blue">
+                            </div>
+                            <div class="mb-4">
+                                <label class="block mb-2">Email</label>
+                                <input type="email"
+                                    class="w-full bg-dark-02 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-neon-blue">
+                            </div>
+                            <div class="mb-4">
+                                <label class="block mb-2">Mensagem</label>
+                                <textarea rows="4"
+                                    class="w-full bg-dark-02 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-neon-blue"></textarea>
+                            </div>
+                            <button type="submit"
+                                class="w-full bg-gradient-to-r from-neon-blue to-neon-purple text-dark-01 font-bold py-3 rounded-lg glow-on-hover transition-all">
+                                Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Elements -->
+        <div class="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-neon-blue/10 to-transparent -z-10"></div>
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-neon-purple/10 to-transparent -z-10">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-gray-800/50">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex justify-center mb-6">
+                <div
+                    class="w-16 h-16 rounded-full bg-gradient-to-br from-neon-blue to-neon-purple flex items-center justify-center">
+                    <span class="font-bold text-dark-01 text-xl">ES</span>
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-bold gradient-text mb-4">Elvis Siqueira</h3>
+            <p class="max-w-xl mx-auto mb-8">Desenvolvedor Front-End focado em criar interfaces modernas, funcionais e
+                acessíveis</p>
+
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#"
+                    class="w-12 h-12 rounded-full bg-gray-800 hover:bg-neon-blue transition-colors flex items-center justify-center">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#"
+                    class="w-12 h-12 rounded-full bg-gray-800 hover:bg-neon-blue transition-colors flex items-center justify-center">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#"
+                    class="w-12 h-12 rounded-full bg-gray-800 hover:bg-neon-blue transition-colors flex items-center justify-center">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#"
+                    class="w-12 h-12 rounded-full bg-gray-800 hover:bg-neon-blue transition-colors flex items-center justify-center">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+
+            <p class="text-sm text-gray-500">© 2023 Elvis Siqueira. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
+        const mobileNav = document.getElementById('mobile-nav');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileNav.classList.add('open');
+        });
+
+        closeMobileMenu.addEventListener('click', () => {
+            mobileNav.classList.remove('open');
+        });
+
+        // Close mobile menu when clicking links
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('open');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Card hover effect enhancement
+        document.querySelectorAll('.futuristic-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const x = e.pageX - card.getBoundingClientRect().left;
+                const y = e.pageY - card.getBoundingClientRect().top;
+
+                const centerX = card.offsetWidth / 2;
+                const centerY = card.offsetHeight / 2;
+
+                const angleY = (x - centerX) / 20;
+                const angleX = (centerY - y) / 20;
+
+                card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) scale3d(1, 1, 1)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+            });
+        });
+
+        // Floating elements animation
+        const floatingElements = document.querySelectorAll('.floating-element');
+        floatingElements.forEach((el, index) => {
+            el.style.animationDelay = `${index * 0.3}s`;
+        });
+    </script>
+    <p
+        style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">
+        Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo"
+            style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a
+            href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;"
+            target="_blank">DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=ellgos/mygithubpages"
+            style="color: #fff;text-decoration: underline;" target="_blank">Remix</a></p>
+</body>
+
 </html>
