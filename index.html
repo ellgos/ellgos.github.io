@@ -172,9 +172,23 @@
         }
 
         .holographic-bar {
+            height: 8px;
+            background-color: #1f2937;
+            /* cor de fundo do container (dark) */
+            border-radius: 9999px;
+            overflow: hidden;
+        }
+
+        .holographic-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00f7ff, #bd00ff);
+            border-radius: 9999px;
+        }
+
+        /* .holographic-bar {
             height: 4px;
             background: linear-gradient(90deg, #00f7ff, #bd00ff);
-        }
+        } */
 
         .gradient-text {
             background: linear-gradient(90deg, #00f7ff, #bd00ff);
@@ -421,52 +435,83 @@
                             <div>
                                 <div class="flex justify-between mb-2">
                                     <span class="font-medium">React</span>
-                                    <span class="text-neon-blue">85%</span>
+                                    <span class="text-neon-blue">15%</span>
                                 </div>
-                                <div class="holographic-bar rounded-full overflow-hidden">
-                                    <div class="h-full rounded-full" style="width: 85%; height: 8px;"></div>
+                                <div class="holographic-bar">
+                                    <div class="holographic-bar-fill" style="width: 15%;"></div>
                                 </div>
                             </div>
 
                             <div>
                                 <div class="flex justify-between mb-2">
                                     <span class="font-medium">Next.js</span>
-                                    <span class="text-neon-blue">75%</span>
+                                    <span class="text-neon-blue">5%</span>
                                 </div>
-                                <div class="holographic-bar rounded-full overflow-hidden">
-                                    <div class="h-full rounded-full" style="width: 75%; height: 8px;"></div>
+                                <div class="holographic-bar">
+                                    <div class="holographic-bar-fill" style="width: 5%;"></div>
                                 </div>
                             </div>
 
                             <div>
                                 <div class="flex justify-between mb-2">
                                     <span class="font-medium">TypeScript</span>
-                                    <span class="text-neon-blue">70%</span>
+                                    <span class="text-neon-blue">10%</span>
                                 </div>
-                                <div class="holographic-bar rounded-full overflow-hidden">
-                                    <div class="h-full rounded-full" style="width: 70%; height: 8px;"></div>
+                                <div class="holographic-bar">
+                                    <div class="holographic-bar-fill" style="width: 10%;"></div>
                                 </div>
                             </div>
 
                             <div>
                                 <div class="flex justify-between mb-2">
                                     <span class="font-medium">Tailwind CSS</span>
-                                    <span class="text-neon-blue">90%</span>
+                                    <span class="text-neon-blue">20%</span>
                                 </div>
-                                <div class="holographic-bar rounded-full overflow-hidden">
-                                    <div class="h-full rounded-full" style="width: 90%; height: 8px;"></div>
+                                <div class="holographic-bar">
+                                    <div class="holographic-bar-fill" style="width: 20%;"></div>
                                 </div>
                             </div>
 
                             <div>
                                 <div class="flex justify-between mb-2">
                                     <span class="font-medium">SASS</span>
-                                    <span class="text-neon-blue">80%</span>
+                                    <span class="text-neon-blue">25%</span>
                                 </div>
-                                <div class="holographic-bar rounded-full overflow-hidden">
-                                    <div class="h-full rounded-full" style="width: 80%; height: 8px;"></div>
+                                <div class="holographic-bar">
+                                    <div class="holographic-bar-fill" style="width: 25%;"></div>
                                 </div>
                             </div>
+
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">JavaScript</span>
+                                    <span class="text-neon-blue">50%</span>
+                                </div>
+                                <div class="holographic-bar">
+                                    <div class="holographic-bar-fill" style="width: 50%;"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">HTML</span>
+                                    <span class="text-neon-blue">75%</span>
+                                </div>
+                                <div class="holographic-bar">
+                                    <div class="holographic-bar-fill" style="width: 75%;"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">CSS</span>
+                                    <span class="text-neon-blue">55%</span>
+                                </div>
+                                <div class="holographic-bar">
+                                    <div class="holographic-bar-fill" style="width: 55%;"></div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -530,8 +575,7 @@
                     <span>npm</span>
                 </div>
                 <div class="tech-item">
-                    <img src="https://vite.dev/logo.svg"
-                        alt="vite" class="w-10 h-10 mb-2">
+                    <img src="https://vite.dev/logo.svg" alt="vite" class="w-10 h-10 mb-2">
                     <span>Vite</span>
                 </div>
                 <div class="tech-item">
@@ -580,40 +624,48 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Project Card -->
                 <a href="#" class="group">
-                    <div class="futuristic-card h-full rounded-xl overflow-hidden">
-                        <div class="relative overflow-hidden h-56">
+                    <div class="futuristic-card rounded-xl">
+                        <div class="relative ">
                             <div class="bg-gradient-to-r from-neon-purple/30 to-neon-blue/30 absolute inset-0"></div>
-                            <div class="bg-gray-700 border-2 border-dashed rounded-xl w-full h-full">
-                                <div class="absolute inset-0 flex items-center justify-center">
-                                    <span
-                                        class="text-2xl font-bold gradient-text group-hover:scale-110 transition-transform">Em
-                                        breve</span>
-                                </div>
+                            <div
+                                class="bg-gray-700 border-2 border-dashed w-full h-56 rounded-xl relative z-10 flex items-center justify-center">
+                                <span
+                                    class="text-2xl font-bold gradient-text group-hover:scale-110 transition-transform">Em
+                                    breve</span>
                             </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold mb-2">Dashboard Admin Moderna</h3>
-                                <p class="text-gray-400 mb-4">Interface de administração responsiva construída com React
-                                    e
-                                    Tailwind CSS</p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-dark-01 rounded-full text-xs">React</span>
-                                    <span class="px-3 py-1 bg-dark-01 rounded-full text-xs">Tailwind</span>
-                                    <span class="px-3 py-1 bg-dark-01 rounded-full text-xs">Context API</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Dashboard Admin Moderna</h3>
+                            <p class="text-gray-400 mb-4">Interface de administração responsiva construída com React e
+                                Tailwind CSS</p>
+                            <div class="flex flex-wrap gap-4">
+                                <div class="tech-item text-center">
+                                    <i class="fab fa-react text-2xl text-cyan-400"></i>
+                                    <span class="block text-sm mt-1">React</span>
+                                </div>
+                                <div class="tech-item text-center">
+                                    <i class="fab fa-css3-alt text-2xl text-sky-400"></i>
+                                    <span class="block text-sm mt-1">Tailwind</span>
+                                </div>
+                                <div class="tech-item text-center">
+                                    <i class="fas fa-database text-2xl text-purple-300"></i>
+                                    <span class="block text-sm mt-1">Context API</span>
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </a>
 
-                <!-- Project 2 -->
+                <!-- Repeat for other projects -->
                 <a href="#" class="group">
-                    <div class="futuristic-card h-full rounded-xl overflow-hidden">
-                        <div class="relative overflow-hidden h-56">
+                    <div class="futuristic-card rounded-xl">
+                        <div class="relative ">
                             <div class="bg-gradient-to-r from-neon-blue/30 to-neon-purple/30 absolute inset-0"></div>
-                            <div class="bg-gray-700 border-2 border-dashed rounded-xl w-full h-full" />
-                            <div class="absolute inset-0 flex items-center justify-center">
+                            <div
+                                class="bg-gray-700 border-2 border-dashed w-full h-56 rounded-xl relative z-10 flex items-center justify-center">
                                 <span
                                     class="text-2xl font-bold gradient-text group-hover:scale-110 transition-transform">Em
                                     breve</span>
@@ -623,10 +675,19 @@
                             <h3 class="text-xl font-bold mb-2">E-commerce NextJS</h3>
                             <p class="text-gray-400 mb-4">Loja virtual completa com carrinho de compras e integração de
                                 pagamento</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-dark-01 rounded-full text-xs">Next.js</span>
-                                <span class="px-3 py-1 bg-dark-01 rounded-full text-xs">TypeScript</span>
-                                <span class="px-3 py-1 bg-dark-01 rounded-full text-xs">Stripe</span>
+                            <div class="flex flex-wrap gap-4">
+                                <div class="tech-item text-center">
+                                    <i class="fab fa-react text-2xl text-blue-400"></i>
+                                    <span class="block text-sm mt-1">Next.js</span>
+                                </div>
+                                <div class="tech-item text-center">
+                                    <i class="fab fa-js-square text-2xl text-yellow-400"></i>
+                                    <span class="block text-sm mt-1">TypeScript</span>
+                                </div>
+                                <div class="tech-item text-center">
+                                    <i class="fas fa-credit-card text-2xl text-pink-400"></i>
+                                    <span class="block text-sm mt-1">Stripe</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -634,11 +695,11 @@
 
                 <!-- Project 3 -->
                 <a href="#" class="group">
-                    <div class="futuristic-card h-full rounded-xl overflow-hidden">
-                        <div class="relative overflow-hidden h-56">
+                    <div class="futuristic-card rounded-xl">
+                        <div class="relative ">
                             <div class="bg-gradient-to-r from-purple-500/30 to-pink-500/30 absolute inset-0"></div>
-                            <div class="bg-gray-700 border-2 border-dashed rounded-xl w-full h-full" />
-                            <div class="absolute inset-0 flex items-center justify-center">
+                            <div
+                                class="bg-gray-700 border-2 border-dashed w-full h-56 rounded-xl relative z-10 flex items-center justify-center">
                                 <span
                                     class="text-2xl font-bold gradient-text group-hover:scale-110 transition-transform">Em
                                     breve</span>
@@ -647,10 +708,19 @@
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Aplicativo de Notas</h3>
                             <p class="text-gray-400 mb-4">Gerenciador de notas com armazenamento local e modo escuro</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-dark-01 rounded-full text-xs">JavaScript</span>
-                                <span class="px-3 py-1 bg-dark-01 rounded-full text-xs">SASS</span>
-                                <span class="px-3 py-1 bg-dark-01 rounded-full text-xs">LocalStorage</span>
+                            <div class="flex flex-wrap gap-4">
+                                <div class="tech-item text-center">
+                                    <i class="fab fa-js text-2xl text-yellow-300"></i>
+                                    <span class="block text-sm mt-1">JavaScript</span>
+                                </div>
+                                <div class="tech-item text-center">
+                                    <i class="fab fa-sass text-2xl text-pink-400"></i>
+                                    <span class="block text-sm mt-1">SASS</span>
+                                </div>
+                                <div class="tech-item text-center">
+                                    <i class="fas fa-hdd text-2xl text-gray-300"></i>
+                                    <span class="block text-sm mt-1">LocalStorage</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -658,13 +728,14 @@
             </div>
 
             <div class="text-center mt-16">
-                <a href="#"
+                <a href="https://github.com/ellgos"
                     class="px-8 py-4 rounded-full bg-gradient-to-r from-neon-purple to-neon-blue text-dark-01 font-bold glow-on-hover transition-all inline-block">
                     <i class="fab fa-github mr-2"></i> Ver Mais no GitHub
                 </a>
             </div>
         </div>
     </section>
+
 
     <!-- Contact Section -->
     <section id="contact" class="py-24 relative">
@@ -719,7 +790,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>   
+                    </div>
                 </div>
             </div>
         </div>
@@ -815,8 +886,10 @@
                 const centerX = card.offsetWidth / 2;
                 const centerY = card.offsetHeight / 2;
 
-                const angleY = (x - centerX) / 20;
-                const angleX = (centerY - y) / 20;
+                const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
+
+                const angleY = clamp((x - centerX) / 15, -15, 15);
+                const angleX = clamp((centerY - y) / 15, -15, 15);
 
                 card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) scale3d(1, 1, 1)`;
             });
